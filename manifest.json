@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "Concord Click to Call",
+  "description": "This is a custom extension to connect Propertybase with the Barracuda phone system.",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "concord.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["popup.js"]
+    }
+  ],
+  "icons": {
+    "128": "concord.png"
+  }
+}
