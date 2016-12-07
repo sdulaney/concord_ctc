@@ -4,12 +4,14 @@
 
   "name": "Concord Click to Call",
   "description": "This is a custom extension to connect Propertybase with the Barracuda phone system.",
-  "version": "1.3",
+  "version": "1.3.1",
   "background": {
       "scripts": [ "phone-format.js", "app.js" ]
   },
   "browser_action": {
-   "default_icon": "concord.png"
+   "default_icon": "concord.png",
+   "default_title": "CONCORD CLICK TO CALL",
+   "default_popup": "popup.html"
   },
   "permissions" : [
     "tabs",
@@ -27,5 +29,5 @@
   "icons": {
     "128": "concord.png"
   },
-  "web_accessible_resources": [ "/logo.png" ]
+  "web_accessible_resources": [ "/logo.png", "/concord.png", "/check_radio_sheet.png", "/popup.css", "/popup.js", "/app.js", "/content.js", "/jquery-3.1.0.js", "/phone-format.js", "/underscore.js", "/vendor.js" ]
 }

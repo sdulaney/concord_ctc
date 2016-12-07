@@ -71,10 +71,25 @@ softphoneWindowId = null, clickedPhone = null, clickedRecordId1 = null, clickedR
 // }, isSalesforceDomain = function(e) {
 //     return /^https:\/\/.+\.salesforce\.com\/.*/i.test(e) || /^https:\/\/.+\.lightning\.force\.com\/.*/i.test(e) || /^https:\/\/.+\.visual\.force\.com\/.*/i.test(e) || /^https:\/\/.+\.cloudforce\.com\/.*/i.test(e) || /^https:\/\/.+\.database\.com\/.*/i.test(e)
 
-    console.log("Tried calling " + t);
-    var xhr = new XMLHttpRequest();
+
     // xhr.onreadystatechange = handleStateChange; // Implemented elsewhere.
-    xhr.open("GET", "http://24.199.26.67/gui/freeswitch/originate?__auth_user=" + "114" + "&__auth_pass=" + "7728" + "&destination=" + t, true);
-    xhr.send();
+    if (localStorage.getItem("sipProtocol") == "sipCallerGet") {
+      var u = localStorage.getItem("sipCallerGetUsername");
+      var p = localStorage.getItem("sipCallerGetPassword");
+      if (u && p) {
+        // r = r.replace(/\$NUMBER/g, t.number.replace(/sipCallerGet\:/i, ""));
+        // o(r, function(t) {
+        //   console.log("SUCCESS: " + r);
+        // });
+        console.log("Tried calling " + t);
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "http://24.199.26.67/gui/freeswitch/originate?__auth_user=" + u + "&__auth_pass=" + p + "&destination=" + t, true);
+        xhr.send();
+      }
+    }
+    else {
+        alert("Please enter your username and password");
+    }
+
 
 };

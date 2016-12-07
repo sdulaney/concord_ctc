@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="popup.css" media="screen" />
+  <!-- <script type="text/javascript" src="header.js"></script> -->
+  <script type="text/javascript" src="popup.js"></script>
+  <script type="text/javascript" src="jquery-3.1.0.js"></script>
+</head>
+<body>
+  <div id="show">
+    <h1>CONCORD CLICK TO CALL</h1>
+    <br/>
+    <div id="options">
+        <p>
+          <input type="radio" id="sipCallerGet" name="protocol" style="visibility:hidden" />
+          <label for="sipCallerGet"><span></span> Barracuda Phone System Login </label>
+          <!-- <input type="text" id="sipCallerGetUrl" placeholder="http://server.com/?user=U&pass=P&dial=$NUMBER" /> -->
+          <input type="text" id="sipCallerGetUsername" placeholder="Username" />
+          <input type="password" id="sipCallerGetPassword" placeholder="Password" />
+        </p>
+      <p>
+        <input type="radio" id="sip" name="protocol" style="visibility:hidden" />
+        <label for="sip" style="visibility:hidden" ><span></span> sip</label>
+      <p>
+      <p>
+        <input type="radio" id="tel" name="protocol" style="visibility:hidden" />
+        <label for="tel" style="visibility:hidden" ><span></span> tel</label>
+      </p>
+      <p>
+        <input type="radio" id="callto" name="protocol" style="visibility:hidden" />
+        <label for="callto" style="visibility:hidden" ><span></span> callto</label>
+      </p>
+      <p>
+        <input type="radio" id="sipCallerAny" name="protocol" style="visibility:hidden" />
+        <label for="sipCallerAny" style="visibility:hidden" ><span></span> Custom Protocol</label>
+        <input type="text" id="sipCallerAnyProtocol" placeholder="Set up your softphone to handle a custom protocol" style="visibility:hidden" />
+      </p>
+    </div>
+  </div>
+</body>
+</html>
